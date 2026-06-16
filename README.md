@@ -2,7 +2,14 @@
 
 This pipelien implements mainly a ResNet50 CNN modified to perform multi-task learning.
 
-The instructions below assume you have installed `uv` project manager.
+The instructions below assume you have installed `uv` project manager.<br>
+
+Once you have clone this repository, inside the main repository folder `datachallenge_resnet50` run the following commands:
+
+```console
+uv sync
+source .venv/bin/activate
+```
 
 You will be able to run both the training and test pipelines.
 
@@ -11,10 +18,10 @@ You will be able to run both the training and test pipelines.
 
 Before running this script make sure you have created a directory called `outputs` at the project's root directory.<br>
 
-For example if your project's directory is `data-challenge`, then you will have:
+For example if your project's directory is `datachallenge_resnet50`:
 
 ```console
-data-challenge/outputs
+datachallenge_resnet50/outputs
 ```
 
 In order to execute the `train.py` please follow the following command line structure.
@@ -30,7 +37,7 @@ Once you obtain a model, create a folder `RUN_XX` inside the `outputs` folder an
 For example:
 
 ```console
-data-challenge/outputs/RUN_XX/
+datachallenge_resnet50/outputs/RUN_XX/
 
     best_model.pth
     best_validation_predictions.csv
@@ -41,9 +48,9 @@ data-challenge/outputs/RUN_XX/
 
 ## Test script `test.py`
 
-In order to execute the `test.py` please follow the following command line struccture.
+In order to execute the `test.py` please follow the following command line structure.
 
-In the terminal, you **must** execute it from toe project root directory.
+In the terminal, you **must** execute it from the project root directory.
 
 ```console
 uv run python -m test
@@ -54,7 +61,7 @@ Since you already created a `RUN_XX/` folder, you will have to choose this folde
 This way the `test_predictions.csv` will be automatically placed in that folder.
 
 ```console
-data-challenge/outputs/RUN_XX/
+datachallenge_resnet50/outputs/RUN_XX/
 
     best_model.pth
     best_validation_predictions.csv
